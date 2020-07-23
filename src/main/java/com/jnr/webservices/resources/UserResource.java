@@ -12,7 +12,7 @@ public class UserResource {
 	
 	@GetMapping
 	public void findAll() {
-		User u = new User(1L, "João Souza", "joao@gmail.com", "99228-5385", "123456");
+		User u = new User(1L, "Test point", "testpoint@gmail.com", "11111111", "123456");
 		System.out.println(u);
 	}
 
