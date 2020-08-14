@@ -44,22 +44,22 @@ public class TestConfig implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		Category category1 = new Category(null, "Electronics");
-		Category category2 = new Category(null, "Books");
-		Category category3 = new Category(null, "Computers");
+		Category category2 = new Category(null, "Gaming");
+		Category category3 = new Category(null, "Computer Systems");
 		
 		categoryRepository.saveAll(Arrays.asList(category1, category2, category3));
 		
-		Product product1 = new Product(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, "");
-		Product product2 = new Product(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, "");
-		Product product3 = new Product(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, "");
-		Product product4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
-		Product product5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
+		Product product1 = new Product(null, "Gaming Desktop", "Asus ROG Strix AMD Ryzen 9 3900X", 5849.0, "");
+		Product product2 = new Product(null, "Smart TV", "LG Smart CX Series OLED 65pol 4K Ultra HD", 3190.0, "");
+		Product product3 = new Product(null, "Mobile Phone", "Samsung S20 512Gb", 4199.90, "");
+		Product product4 = new Product(null, "Desktop Computer", "DELL Business Intel Core i7 9700K", 3599.0, "");
+		Product product5 = new Product(null, "Playstation System", "PS4 Pro 1Tb", 2499.99, "");
 		
 		productRepository.saveAll(Arrays.asList(product1, product2, product3, product4, product5));
 		
-		product1.getCategories().add(category2);
+		product1.getCategories().add(category3);
 		product2.getCategories().add(category1);
-		product3.getCategories().add(category3);
+		product3.getCategories().add(category1);
 		product4.getCategories().add(category3);
 		product5.getCategories().add(category2);
 		
